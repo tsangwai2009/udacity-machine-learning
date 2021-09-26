@@ -1,0 +1,74 @@
+In microserivce appoach, REST APIs use standard HTTP verbs (methods) and status codes to provide some level of standardization. They are accessed via HTTP URLs and are widely used for web services.
+Most web APIs are exposed to the Internet, so they need suitable security mechanisms to prevent abuse, protect sensitive data, and ensure that only authenticated and authorized users can access them.
+Connection Security
+Security starts with the HTTP connection itself. Secure REST APIs should only provide HTTPS endpoints to ensure that all API communication is encrypted using SSL/TLS. This allows clients to authenticate the service and protects the API credentials and transmitted data.
+API Access Control
+JSON Web Tokens (JWT):
+HTTP Basic Authentication
+OAuth
+==================
+https://www.astera.com/type/blog/data-manipulation-tools/
+https://threatpost.com/what-is-a-data-manipulation-attack-and-how-to-mitigate-against-them/141563/
+==================
+Policy checking and scanning
+
+https://kubernetes.io/docs/concepts/security/_print/
+what
+
+3 Pod Security Standards (Range from highly-permissive to highly-restrictive.)
+i. Privileged: 
+Unrestricted policy, providing the widest possible level of permissions. This policy allows for known privilege escalations.
+ii. Baseline: 
+Minimally restrictive policy which prevents known privilege escalations. Allows the default (minimally specified) Pod configuration.
+iii. Restricted: 
+Heavily restricted policy, following current Pod hardening best practices.
+
+
+why
+i.Privileged policy:
+- is purposely-open, and entirely unrestricted. 
+- aimed at system- and infrastructure-level workloads managed by privileged, trusted users.
+
+risk
+https://techbeacon.com/enterprise-it/4-kubernetes-security-challenges-how-address-them
+- pod security policies are key to securing a multi-tenant cluster, but the feature is still beta and is not turned on by default
+- feature-rich Kubernetes platform can make it challenging to understand the default features, but it is essential to figure it out.
+ii.Baseline policy
+- aimed at ease of adoption for common containerized workloads while preventing known privilege escalations
+- targeted at application operators and developers of non-critical applications. 
+
+iii.Restricted
+- aimed at enforcing current Pod hardening best practices, at the expense of some compatibility.
+- targeted at operators and developers of security-critical applications, as well as lower-trust users. The following listed controls should be enforced/disallowed
+=================================
+what
+• Debugging is a necessary procedure to ensure a program can run correctly by finding out and fixing the error
+• Debugging can be divided into the following two stages
+1.Compile-time debugging
+Correct the errors owing to incorrect use of language syntax or unresolved references
+2. Run-time debugging
+Correct the errors owing to incorrect program logic or resource usage
+
+
+why 
+Compile-time errors will spotted out by the compiler and cause compile fail.
+Run-time errors may sometimes lead to incorrect results or even system failure.
+Even worst, some run-time errors give no observable problem but gradually damage the system or the database.
+To allow program run correctly, further to protect system and database, debugging is important when developing application. 
+
+Risk
+locate the errors
+run- time errors are difficult to locate and correct since they only could be observed at run-time
+
+Achieved by the divide and conquer approach
+• The simplest way is to set some check-points
+in the program and to see how many checkpoints the program can correctly get through.
+
+A structured way in program development can help avoid run-time errors
+• Never develop your program in one step
+• Always ensure the skeleton is correct before
+going forward.
+==============
+Standardized protocols are like a common language that computers can use, similar to how two people from different parts of the world may not understand each other's native languages, but they can communicate using a shared third language. If one computer uses the Internet Protocol (IP) and a second computer does as well, they will be able to communicate . If one computer uses IP and the other does not know this protocol, they will be unable to communicate.
+In networking, a protocol is a set of rules for formatting and processing data.
+==============
